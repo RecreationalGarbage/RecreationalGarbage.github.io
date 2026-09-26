@@ -97,6 +97,18 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </a>
 <h2 class="title">A</h2>
 <dl>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#activityPercent()">activityPercent()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">The activity meter as 0-100% (raw ×2). The overlay's activity element is a bar sprite with no text, so this varbit - not the widget - is the only source that works. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#activityRaw()">activityRaw()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">The activity meter, 0-50, from varbit 5662. Starts a game at 25; locks at 0 for the rest of the game (no points earned after). XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#attackStyle()">attackStyle()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">attackStyle helper. XPE method.</div>
+</dd>
 <dt><a href="org/dreambot/api/methods/widget/helpers/Jewellery.html" title="class in org.dreambot.api.methods.widget.helpers"><span class="typeNameLink">Jewellery</span></a> - Class in <a href="org/dreambot/api/methods/widget/helpers/package-summary.html">org.dreambot.api.methods.widget.helpers</a></dt>
 <dd>
 <div class="block">The furnace's gold jewellery panel: gold rings, necklaces, amulets and bracelets, plain or with a gem.</div>
@@ -156,6 +168,90 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="org/dreambot/api/methods/widget/helpers/Jewellery.html#describe()">describe()</a></span> - Static method in class org.dreambot.api.methods.widget.helpers.<a href="org/dreambot/api/methods/widget/helpers/Jewellery.html" title="class in org.dreambot.api.methods.widget.helpers">Jewellery</a></dt>
 <dd>
 <div class="block">The panel's actionable com ponents, for reading nam es and actions off. An XPE extra. Proven in game "J ewellery test", at a furnace with gold bars and a ring m ould, 2026-09-13. MakeAll(Gold ring): the All quantity is already selected No quantity click was needed, one click went on the G old ring slot, a gold bar was used within 2.3 seconds, and there were two rings by the time the rig stopped counting. RESULT: PASS. XPE method.</div>
+</dd>
+<dt><a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame"><span class="typeNameLink">PestControl</span></a> - Class in <a href="org/dreambot/api/methods/minigame/package-summary.html">org.dreambot.api.methods.minigame</a></dt>
+<dd>
+<div class="block">The Pest Control minigame as an API: the in-game data a script reads, and the reward interface it acts on. The bot's logic - roles, portal targeting, combat, gate repair, boarding, point thresholds - is deliberately not here; that belongs to your script. This gives it what to see and what to click. XPE-original: DreamBot has no Pest Control class. Every member is static and nothing throws - a read returns a safe default (0, -1, false, null, or an empty map) when it cannot answer, and an interact returns false and does nothing.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#isGameActive()">isGameActive()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">Whether a game is in progress: in an instance with the in-game overlay (group 408) up. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#isInOutpost()">isInOutpost()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">Whether the local player is within the Void Knights' Outpost. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#isOnLander()">isOnLander()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">On a lander: confirmed aboard, or standing in a lander rectangle. The combined signal. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#isConfirmedOnLander()">isConfirmedOnLander()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">Strong signal - the waiting-screen widget (group 407, "Next Departure") is up, true only while genuinely aboard. Use this to decide boarding is done. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#isInAnyLanderArea()">isInAnyLanderArea()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">Weak signal - inside a lander rectangle, which also covers some dock tiles beside the boats. Do not use it alone to decide boarding is unnecessary. The game. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#voidKnightHealth()">voidKnightHealth()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">The Void Knight's remaining hitpoints, from the overlay. 0 when it cannot be read. Tile voidKnightTile() The Void Knight's tile in the current game, or null if it is not on screen. Portals are told apart by their position relative to it. Portals - enum PestControl.Portal XPE Script API  ·  Pest Control Page 2 The four portals, by compass position and the combat style each is weak to. A portal is told apart from the others by its position relative to the Void Knight; its NPC id says only whether the shield is up. PORTAL label() weak to shielded id unshielded id WEST "West" Ranged 1743 1739 EAST "East" Magic 1744 1740 SOUTH_WEST "South-West" Stab 1746 1742 SOUTH_EAST "South-East" Crush 1745 1741 NPC npc() This portal's NPC in the current game, identified by position, or null. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#isShielded()">isShielded()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">Whether the shield is still up (the NPC is the shielded id). XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#isVulnerable()">isVulnerable()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">Whether the shield is down - attackable now (the NPC is the unshielded id). XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#hitpoints()">hitpoints()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">This portal's hitpoints from the overlay, or -1 when unknown. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#label()">label()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">label helper. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#shieldedId()">shieldedId()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">shieldedId helper. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#unshieldedId()">unshieldedId()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">The portal's compass name, the style it is weak to, and its two NPC ids. Statics NPC portalNpc(Portal type) Finds a portal's NPC by position relative to the Void Knight; null if the knight or the portal is not found. Map&lt;Portal,Integer&gt; portalHealthMap() Per-portal hitpoints read from the overlay, cached 600ms. An empty or partial map means unknown - never treat a missing portal as 0. On the health map's fallback. It prefers letter-tagged texts ("W: 250"). Failing that, it maps exactly four bare numbers in overlay order W, E, SE, SW - confirm that order once in a live game. isShielded()/isVulnerable(), read off the NPC id, do not depend on it. The reward interface. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#rewardsOpen()">rewardsOpen()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">Whether the Void Knights' reward interface is open. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#openRewards()">openRewards()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">Opens it by talking to the exchanger (NPC 1757, "Exchange"). True if already open or the NPC was clicked; walk to the exchanger (~2661, 2649) first. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#close()">close()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">Closes the interface; false if it was not open. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#getPoints()">getPoints()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">The commendation-point total, or POINTS_UNKNOWN (-1) when the shop is closed. XPE Script API  ·  Pest Control Page 3. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#pointsKnown()">pointsKnown()</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">Whether the total is readable right now - i.e. the shop is open. Why points read -1 when the shop is shut. The total lives in varp 261, but the game reuses that slot for genie-lamp and item-retrieval state the moment the shop closes. So a blind read outside the shop returns garbage - a frozen 0, or a plausible-looking wrong number. Read it only while open, and estimate earnings between visits in your script. Spending - enums Skill and Reward Each enum value clicks its own button off the open interface, by the exact menu text - which is checked against a live widget dump by the built-in rig. boolean Skill.interact(int points) Buys 1, 10 or 100 points of this skill's XP from the open interface. False for any other amount or a closed interface. String Skill.action(int points) The menu action it clicks, e.g. "Attack XP: 100 points"; null if the amount is not 1/10/100. Note the singular "point" at 1. boolean Reward.interact() Buys this reward from the open interface. Some rewards prompt a confirmation dialogue this does not answer - handle that with the dialogue API. String Reward.action() The interface action that buys this reward. Statics. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#buyXp(Skill,int)">buyXp(Skill, int)</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">buyXp helper. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#buy(Reward)">buy(Reward)</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">buy helper. XPE method.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="org/dreambot/api/methods/minigame/PestControl.html#xpAction(Skill,int)">xpAction(Skill, int)</a></span> - Static method in class org.dreambot.api.methods.minigame.<a href="org/dreambot/api/methods/minigame/PestControl.html" title="class in org.dreambot.api.methods.minigame">PestControl</a></dt>
+<dd>
+<div class="block">Conveniences over the enum methods, for callers holding the value in hand. Skill Reward ATTACK, STRENGTH, DEFENCE, HERB_PACK, MINERAL_PACK, SEED_PACK, RANGED, MAGIC, HITPOINTS, VOID_KNIGHT_MACE / TOP / ROBES / GLOVES / SEAL, PRAYER VOID_MAGE_HELM, VOID_RANGER_HELM, VOID_MELEE_HELM. XPE method.</div>
 </dd>
 </dl>
 <a href="#I:A">A</a>&nbsp;<a href="#I:B">B</a>&nbsp;<a href="#I:C">C</a>&nbsp;<a href="#I:D">D</a>&nbsp;<a href="#I:E">E</a>&nbsp;<a href="#I:F">F</a>&nbsp;<a href="#I:G">G</a>&nbsp;<a href="#I:H">H</a>&nbsp;<a href="#I:I">I</a>&nbsp;<a href="#I:J">J</a>&nbsp;<a href="#I:K">K</a>&nbsp;<a href="#I:L">L</a>&nbsp;<a href="#I:M">M</a>&nbsp;<a href="#I:N">N</a>&nbsp;<a href="#I:O">O</a>&nbsp;<a href="#I:P">P</a>&nbsp;<a href="#I:Q">Q</a>&nbsp;<a href="#I:R">R</a>&nbsp;<a href="#I:S">S</a>&nbsp;<a href="#I:T">T</a>&nbsp;<a href="#I:U">U</a>&nbsp;<a href="#I:V">V</a>&nbsp;<a href="#I:W">W</a>&nbsp;<a href="#I:X">X</a>&nbsp;<a href="#I:Y">Y</a>&nbsp;<a href="#I:Z">Z</a>&nbsp;<br><a href="allclasses-index.html">All&nbsp;Classes</a>&nbsp;<a href="allpackages-index.html">All&nbsp;Packages</a></div>
