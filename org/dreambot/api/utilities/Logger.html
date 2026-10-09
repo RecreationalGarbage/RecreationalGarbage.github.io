@@ -36,6 +36,9 @@
 <![endif]-->
 <script type="text/javascript" src="../../../../jquery/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../../jquery/jquery-ui.min.js"></script>
+
+<meta name="keywords" content="channel()">
+<meta name="keywords" content="channel()">
 </head>
 <body>
 <script type="text/javascript"><!--
@@ -47,7 +50,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":9,"i19":9,"i20":9,"i21":9,"i22":9,"i23":9,"i24":9};
+var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":9,"i19":9,"i20":9,"i21":9,"i22":9,"i23":9,"i24":9,"i25":9,"i26":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -355,6 +358,23 @@ extends java.lang.Object</pre>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#warn(java.lang.Object)">warn</a></span>&#8203;(java.lang.Object&nbsp;object)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr id="i25" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#channel(java.lang.String,java.awt.Color,java.lang.Object)">channel</a></span>&#8203;(java.lang.String&nbsp;name,
+    java.awt.Color&nbsp;colour,
+    java.lang.Object&nbsp;message)</code></th>
+<td class="colLast">
+<div class="block">The same, drawn in colour in the Debug tab, as log(Color, Object) is. A null colour draws plainly. The log file keeps the text without the colour. XPE method.</div>
+</td>
+</tr>
+<tr id="i26" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#channel(java.lang.String,java.lang.Object)">channel</a></span>&#8203;(java.lang.String&nbsp;name,
+    java.lang.Object&nbsp;message)</code></th>
+<td class="colLast">
+<div class="block">Logs message to the channel called name, rendered as log(Object) renders it. A blank or null name logs under channel. XPE method.</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -382,7 +402,7 @@ extends java.lang.Object</pre>
 <a id="&lt;init&gt;()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>Logger</h4>
 <pre>public&nbsp;Logger()</pre>
@@ -636,12 +656,46 @@ extends java.lang.Object</pre>
 <a id="appendExecutorData(java.lang.StringBuilder)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>appendExecutorData</h4>
 <pre class="methodSignature">public static&nbsp;java.lang.StringBuilder&nbsp;appendExecutorData&#8203;(java.lang.StringBuilder&nbsp;builder)</pre>
 </li>
+</ul><a id="channel(java.lang.String,java.awt.Color,java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>channel</h4>
+<pre class="methodSignature">public static&nbsp;void&nbsp;channel&#8203;(java.lang.String&nbsp;name,
+                java.awt.Color&nbsp;colour,
+                java.lang.Object&nbsp;message)</pre>
+<div class="block">The same, drawn in colour in the Debug tab, as log(Color, Object) is. A null colour draws plainly. The log file keeps the text without the colour. XPE method.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - name</dd>
+<dd><code>colour</code> - colour</dd>
+<dd><code>message</code> - message</dd>
+</dl>
+</li>
 </ul>
+<a id="channel(java.lang.String,java.lang.Object)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>channel</h4>
+<pre class="methodSignature">public static&nbsp;void&nbsp;channel&#8203;(java.lang.String&nbsp;name,
+                java.lang.Object&nbsp;message)</pre>
+<div class="block">Logs message to the channel called name, rendered as log(Object) renders it. A blank or null name logs under channel. XPE method.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - name</dd>
+<dd><code>message</code> - message</dd>
+</dl>
+</li>
+</ul>
+
 </li>
 </ul>
 </section>
