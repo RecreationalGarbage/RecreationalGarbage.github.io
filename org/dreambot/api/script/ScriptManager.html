@@ -10,6 +10,7 @@
 <meta name="keywords" content="getScriptManager()">
 <meta name="keywords" content="reloadLastScript()">
 <meta name="keywords" content="start()">
+<meta name="keywords" content="startAfterStop()">
 <meta name="keywords" content="containsListener()">
 <meta name="keywords" content="addListener()">
 <meta name="keywords" content="removeListener()">
@@ -67,7 +68,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":9,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":9,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -428,12 +429,20 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#startAfterStop(java.lang.String,java.lang.String...)">startAfterStop</a></span>&#8203;(java.lang.String&nbsp;scriptName,
+     java.lang.String...&nbsp;args)</code></th>
+<td class="colLast">
+<div class="block">Queues the named script to start with the supplied arguments after the current script stops. XPE method.</div>
+</td>
+</tr>
+<tr id="i34" class="altColor">
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stop()">stop</a></span>()</code></th>
 <td class="colLast">
 <div class="block">This will force stop the current script running, including killing the thread if necessary.</div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stopWithScheduledStop()">stopWithScheduledStop</a></span>()</code></th>
 <td class="colLast">
@@ -441,7 +450,7 @@ extends java.lang.Object</pre>
  <a href="AbstractScript.html#onScheduledStop()"><code>AbstractScript.onScheduledStop()</code></a> returns true.</div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unregisterMetadata(java.lang.String)">unregisterMetadata</a></span>&#8203;(java.lang.String&nbsp;key)</code></th>
 <td class="colLast">
@@ -535,6 +544,22 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>start</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;start&#8203;(java.lang.Class&lt;? extends <a href="AbstractScript.html" title="class in org.dreambot.api.script">AbstractScript</a>&gt;&nbsp;scriptClass)</pre>
+</li>
+</ul>
+<a id="startAfterStop(java.lang.String,java.lang.String...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>startAfterStop</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;startAfterStop&#8203;(java.lang.String&nbsp;scriptName,
+                  java.lang.String...&nbsp;args)</pre>
+<div class="block">Queues the named script to start with the supplied arguments after the current script stops. XPE method.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>scriptName</code> - Name of the script to start.</dd>
+<dd><code>args</code> - Startup arguments for the next script.</dd>
+</dl>
 </li>
 </ul>
 <a id="containsListener(java.util.EventListener)">
