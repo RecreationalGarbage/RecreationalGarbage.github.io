@@ -147,3 +147,16 @@ function updateModuleFrame(pFrame, cFrame) {
     top.packageFrame.location = pFrame;
     top.classFrame.location = cFrame;
 }
+
+// Shared navigation enhancement; generated documentation and indexes stay unchanged.
+(function () {
+    var root = new URL('.', document.currentScript.src);
+    var style = document.createElement('link');
+    style.rel = 'stylesheet';
+    style.href = new URL('api-navigation.css', root).href;
+    style.onload = function () { window.dispatchEvent(new Event('resize')); };
+    document.head.appendChild(style);
+    var navigation = document.createElement('script');
+    navigation.src = new URL('api-navigation.js', root).href;
+    document.head.appendChild(navigation);
+}());
